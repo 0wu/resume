@@ -1,0 +1,184 @@
+%%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,letterpaper,sans]{moderncv}
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and '
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purpl
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[margin=1in]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{2cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{9cm} % For the 'classic' style, uncomment to adjust the width of t
+\graphicspath{{../}{image/}}
+\renewcommand*{\refname}{Selected Publications}
+
+
+\usepackage{CJK}
+\usepackage{xstring}
+\usepackage{comment}
+%\usepackage{bibentry}
+%\nobibliography*
+%\usepackage[numbers]{natbib}
+
+%\usepackage[sorting=none]{biblatex}
+%\addbibresource{thesis.bib}
+
+\firstname{Tingfan}
+\familyname{Wu 吳亭範}
+\title{}
+\address{Dept. CSE, UCSD., 9500 Gilman Dr}{La Jolla, CA 92093-0404 U.S.A}
+\phone{858-436-4485}
+\email{tingfan@gmail.com}
+\homepage {mplab.ucsd.edu/\textasciitilde ting/}
+
+\def\libsvm{\httplink[\textbf{libsvm}\homepagesymbol]{www.csie.ntu.edu.tw/\textasciitilde cjlin/libsvm}}
+
+\begin{document}
+
+\begin{CJK*}{UTF8}{bkai}
+\makecvtitle
+\end{CJK*}
+
+\vspace{-10mm}
+
+\section{Objective}
+%Seeking a full-time research software engineer position in self-driving car perception or control team
+Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robotic Challenge Team
+
+\section{Technical Skills}
+	\cvitem{programming}{Matlab, Python, Java, C/C++}
+	\cvitem{robotics}{humanoid locomotion, articulate body kinematics/dynamics modeling \& identification, reinforcement motor learning,  sensor fusion, optical motion capture,  optimal control (iterative LQG), pneumatic actuators, Robotic Operating System (ROS)}
+	\cvitem{computer vision}{texture recognition, activity classification, facial expression analysis, support vector machines}
+	\cvitem{fabrication}{Solidworks, 3D printing, laser cutter, CNC, basic PCB,  8051, Arduino}
+
+	
+\section{Professional Experience}
+	\cventry{2013}{Visiting Scholar}{}{P.I Emanuel Todorov}{University of Washington}
+	{
+		\begin{itemize}
+		\item Constructing model predictive controllers for humanoid robot walking and anthropomorphic robot arm manipulation
+		\end{itemize}
+	}
+	\cventry{2010-2013}{Research Assistant}{}{P.I. Javier Movellan}{}
+	{
+	  \begin{itemize}%\parskip=0pt\vspace*{-3pt}
+	  \item Developed an automatic sensor \textbf{calibration} algorithm exploiting redundancy among sensors of multiple modalities. On a task calibrating 38 joint-angle potentiometers and 24 motion capture markers on a humanoid robot, the algorithm achieves  7x higher precision than manual calibration
+	  \item Designed a \textbf{semi-parametric dynamics model} which outperforms its parametric and non-parametric counterparts. The proposed model  flexibly fits arbitrary observed dynamics  and  generalizes systematically to unobserved situation 
+	  \item Created a novel \textbf{reinforcement learning framework} enabling  humanoid robots to learn motor and social skills in the similar manner as we humans do
+	  \end{itemize}
+	}
+	
+	\cventry{2007- 2010}{Research Assistant / Software Engineer}{}{P.I. Marian Bartlett / {\httplink[Emotient\homepagesymbol]{emotient.com}}}{}
+	{
+		\begin{itemize}
+		\item Designed novel computer vision algorithms for spatiotemporal Action Unit based facial expression recognition;
+		widely used in emotion related research;  being commercialized by a  startup, Emotient
+		\end{itemize}
+	}
+	\cventry{2004}{Research Intern}{}{Siemens Corporate Research}{Princeton, NJ}
+	{
+	  \begin{itemize}
+	  \item Developed software for automatic hearing aids shell customization from 3D ear canal model
+	  \item Created a high-accuracy colon polyp detector for computer tomography data
+	  \end{itemize}
+	  }
+
+	\cventry{2002 - 2004}{Undergraduate Research Assistant}{}{P.I. Chih-Jen Lin}{}
+	{
+		\begin{itemize}
+		\item Created an efficient algorithm for probability estimation for  support vector machines, now implemented in \libsvm
+		\end{itemize}
+	}
+\section{Education}
+
+\cventry{2013}{Ph.D. in Computer Science}{University of California, San Diego (UCSD)}{La Jolla, CA}{}
+{
+	Thesis: Machine Learning Algorithms for Humanoid Robot Modeling and Control
+	Advisor: Javier Movellan 
+}
+
+\cventry{2010}{M.Sc. in Computer Science}{University of California, San Diego (UCSD)}{La Jolla, CA}{}
+{
+	Research: Computer Vision -- FACS-based Facial Expression Recognition
+	Advisor: Javier Movellan \& Marian Bartlett | GPA:3.84
+}
+
+
+\cventry{2004}{B.Sc in Computer Science}{National Taiwan University (NTU)}{Taipei City, Taiwan}{}
+{
+  	Research: Probabilistic Output for Support Vector Machines (in \libsvm) 
+	Advisor: Chih-Jen Lin | GPA: 3.91(major)\\
+	President's Award (top 5\% in class) in 2000, 2002 and 2003
+}
+
+\section{Software}
+\cventry{2004}{libsvm-prob}{}{extensions to a popular support vector machine library to provide probabilistic prediction in addition to original binary predictions (1800$^+$ citations)}{}{}
+\cventry{2007-2011}{AULearner}{}{a module for Computer Expression Recognition Toolbox(CERT) for Action Unit based expression recognition}{}{}
+\cventry{2012-2013}{ROS-Matlab-Bridge}{}{a library enabling writing ROS node in Matlab \httplink[\homepagesymbol(80$^+$ downloads)]{http://code.google.com/p/mplab-ros-pkg/wiki/java_matlab_bridge}}{}{}
+
+
+% PUBLICATION section, title created by cls file automatically
+%this macro matches my name and bold-face it.
+\let\originalbibitem\bibitem
+\def\bibitem#1#2\par{%
+  \noexpandarg
+  \originalbibitem{#1}
+  \StrSubstitute{#2}{Tingfan Wu}{\textbf{Tingfan Wu}}}
+\newcommand{\mypaper}[1]{\httplink[\homepagesymbol]{mplab.ucsd.edu/\textasciitilde ting/pdfs/#1}}
+  
+ %now the list of articles to be cited
+\bibliographystyle{myunsrt}
+\bibliography{./thesis}
+	\nocite{wu2013stac}
+	\nocite{wu2013dna}
+	\nocite{tassa2013}
+	\nocite{wu2012semi}
+	\nocite{wu2012multilayer}
+	\nocite{wu2011mocap}
+	\nocite{wu2011action}
+	\nocite{wu2010facial}
+	\nocite{wu2009learning}
+	\nocite{wu2004probability}
+	\nocite{ruvolo2012control}
+	\nocite{sikka2012exploring}
+	\nocite{long2012learning}
+	\nocite{littlewort2011computer}
+	\nocite{littlewort2011motion}
+	\nocite{whitehill2009whose}
+	\nocite{wang2009hebbian}
+	\nocite{bartlett2008computer}
+	\nocite{bartlett2006insights}
+	%\printbibliography
+
+
+\section{Presentations}
+	\cventry{}{``Cross Database Action Unit Recognition Transfer''}{Facial Expression Recognition Analysis Challenge 2011}{Santa Barbara, CA}{(Second Place Winner Talk)}{}{}
+	\cventry{}{``A Practical Guide to Support Vector Machines''}{a general introduction talk to SVMs presented multiple times in NSF iSLC meeting 2008, UCSD TDLC bootcamp 2009, and  Telluride Neuromorphic  Workshop 2009}{}{}{}
+	\cventry{}{``Cafeteria Vision -- an automatic dish identification and amount measurement system''}{UCSD All Graduate Student Symposium}{}{}{}
+	\cventry{}{``Ranking by Stealing Human Cycles''}{Workshop in Machine Learning Summer School 2006}{Taipei, Taiwan}{}{}
+	\cventry{}{``The Colorful Liquid Crystal Filter''}{International Science and Engineering Fair 2000}{Detroit, IL}{(Fourth Award, ranked 7/157)}{}
+	
+\section{Academic Service}
+		\cventry{2011-2013}{Reviewer}{International Conference on Robotics and Automation}{}{}{}
+		\cventry{2012}{Communication Chair}{IEEE International Conference on Development and  Learning}{}{}{}
+		\cventry{2008}{Student Committee}{UCSD CSE Ph.D Admission Committee}{}{}{}
+		\cventry{2006-2007}{Reviewer}{IEEE Transactions on Knowledge and Data Engineering}{}{}{}
+		\cventry{2007}{Reviewer}{IEEE Transactions on Neural Networks}{}{}{}
+ 
+\section{Other Experiences}
+	\cventry{2004 - 2005}{Information System Officer}{}{R.O.C Air Force Academy} {Kaohsiung, Taiwan}
+	{
+ 		\begin{itemize}\parskip=0pt\vspace*{-3pt}
+ 			\item Lead a team of 12 people delivering 24hr services to base-wide intranet and 1500+ PCs
+			\item Developed a network anomaly detector using support vector machines on netflow data
+			\item Trained soldiers without technical experience to diagnose computer problems by customized SOPs and statistical issue tracking systems;
+			sped up the throughput by an order of magnitude
+ 		\end{itemize}
+	}
+  \section{Additional Skills}
+ 	\cvitem{languages}{English (proficient) Mandarin Chinese (native), Taiwanese (native)}
+\end{document}
+ 
+
+\end{document}
+
