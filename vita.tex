@@ -10,15 +10,15 @@
 \setlength{\hintscolumnwidth}{2cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{9cm} % For the 'classic' style, uncomment to adjust the width of t
 \graphicspath{{../}{image/}}
-\renewcommand*{\refname}{Selected Publications}
-
+%\renewcommand*{\refname}{Selected Publications}
 
 \usepackage{CJK}
 \usepackage{xstring}
 \usepackage{comment}
-%\usepackage{bibentry}
-%\nobibliography*
-%\usepackage[numbers]{natbib}
+
+\usepackage{bibentry}
+\nobibliography*
+\usepackage[numbers]{natbib}
 
 %\usepackage[sorting=none]{biblatex}
 %\addbibresource{thesis.bib}
@@ -26,10 +26,10 @@
 \firstname{Tingfan}
 \familyname{Wu 吳亭範}
 \title{}
-\address{Dept. CSE, UCSD., 9500 Gilman Dr}{La Jolla, CA 92093-0404 U.S.A}
-\phone{858-436-4485}
+\address{1885 EL Paseo St. Apt 519}{Houston, TX 77054 U.S.A}
+\phone{336-837-8244}
 \email{tingfan@gmail.com}
-\homepage {mplab.ucsd.edu/\textasciitilde ting/}
+%\homepage {mplab.ucsd.edu/\textasciitilde ting/}
 
 \def\libsvm{\httplink[\textbf{libsvm}\homepagesymbol]{www.csie.ntu.edu.tw/\textasciitilde cjlin/libsvm}}
 
@@ -41,9 +41,9 @@
 
 \vspace{-10mm}
 
-\section{Objective}
+%\section{Objective}
 %Seeking a full-time research software engineer position in self-driving car perception or control team
-Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robotic Challenge Team
+%Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robotic Challenge Team
 
 \section{Technical Skills}
 	\cvitem{programming}{Matlab, Python, Java, C/C++}
@@ -53,12 +53,28 @@ Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robo
 
 	
 \section{Professional Experience}
+	\cventry{2015-present}{Co-Founder \& Chief Scientist}{}{}{UmboCV Inc.}
+	{
+	}
+	
+	\cventry{2013-2015}{Postdoc Researcher}{}{P.I Jerry Pratt}{Florida Institute Human Machine Cognition (IHMC)}
+	{
+		\begin{itemize}
+		\item Integrate whole-body force-control and ICP-based walking algorithm onto Boston Dynamics Atlas humanoid. My primary focus was on 
+			low-level hydraulic force control. We won second place on DARPA Robotics Challenge (2015) and DARPA Robotic Challenge Trials (2013).
+		\item Lead the IHMC effort porting the IHMC control/walking algorithm onto NASA's humanoid robot, Valkyrie. Besides
+		project management, I also focused on series-elastic actuator torque control tuning and robot pose sensor processing.
+		\item Integrate vision algorithms for drift-free robot pose estimation and automatic robot testing.
+		\end{itemize}
+	}
+	
 	\cventry{2013}{Visiting Scholar}{}{P.I Emanuel Todorov}{University of Washington}
 	{
 		\begin{itemize}
 		\item Constructing model predictive controllers for humanoid robot walking and anthropomorphic robot arm manipulation
 		\end{itemize}
 	}
+	
 	\cventry{2010-2013}{Research Assistant}{}{P.I. Javier Movellan}{}
 	{
 	  \begin{itemize}%\parskip=0pt\vspace*{-3pt}
@@ -75,6 +91,7 @@ Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robo
 		widely used in emotion related research;  being commercialized by a  startup, Emotient
 		\end{itemize}
 	}
+	
 	\cventry{2004}{Research Intern}{}{Siemens Corporate Research}{Princeton, NJ}
 	{
 	  \begin{itemize}
@@ -93,20 +110,20 @@ Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robo
 
 \cventry{2013}{Ph.D. in Computer Science}{University of California, San Diego (UCSD)}{La Jolla, CA}{}
 {
-	Thesis: Machine Learning Algorithms for Humanoid Robot Modeling and Control
+	Thesis: Machine Learning Algorithms for Humanoid Robot Modeling and Control \\
 	Advisor: Javier Movellan 
 }
 
 \cventry{2010}{M.Sc. in Computer Science}{University of California, San Diego (UCSD)}{La Jolla, CA}{}
 {
-	Research: Computer Vision -- FACS-based Facial Expression Recognition
-	Advisor: Javier Movellan \& Marian Bartlett | GPA:3.84
+	Research: Computer Vision -- FACS-based Facial Expression Recognition \\
+	Advisor: Javier Movellan \& Marian Bartlett | GPA:3.84 
 }
 
 
 \cventry{2004}{B.Sc in Computer Science}{National Taiwan University (NTU)}{Taipei City, Taiwan}{}
 {
-  	Research: Probabilistic Output for Support Vector Machines (in \libsvm) 
+  	Research: Probabilistic Output for Support Vector Machines (in \libsvm)  \\
 	Advisor: Chih-Jen Lin | GPA: 3.91(major)\\
 	President's Award (top 5\% in class) in 2000, 2002 and 2003
 }
@@ -116,47 +133,52 @@ Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robo
 \cventry{2007-2011}{AULearner}{}{a module for Computer Expression Recognition Toolbox(CERT) for Action Unit based expression recognition}{}{}
 \cventry{2012-2013}{ROS-Matlab-Bridge}{}{a library enabling writing ROS node in Matlab \httplink[\homepagesymbol(80$^+$ downloads)]{http://code.google.com/p/mplab-ros-pkg/wiki/java_matlab_bridge}}{}{}
 
-
 % PUBLICATION section, title created by cls file automatically
 %this macro matches my name and bold-face it.
+
 \let\originalbibitem\bibitem
 \def\bibitem#1#2\par{%
   \noexpandarg
   \originalbibitem{#1}
-  \StrSubstitute{#2}{Tingfan Wu}{\textbf{Tingfan Wu}}}
-\newcommand{\mypaper}[1]{\httplink[\homepagesymbol]{mplab.ucsd.edu/\textasciitilde ting/pdfs/#1}}
+  \StrSubstitute{#2}{Tingfan Wu}{\textbf{Tingfan Wu}}
+  \StrSubstitute{#2}{Ting-Fan Wu}{\textbf{Ting-Fan Wu}}}
+%\newcommand{\mypaper}[1]{\httplink[\homepagesymbol]{mplab.ucsd.edu/\textasciitilde ting/pdfs/#1}}
   
  %now the list of articles to be cited
-\bibliographystyle{myunsrt}
-\bibliography{./thesis}
-	\nocite{wu2013stac}
-	\nocite{wu2013dna}
-	\nocite{tassa2013}
+\bibliographystyle{unsrt}
+\bibliography{./thesis.bib}
+	\nocite{wu2004probability}
+	\nocite{bartlett2006insights}
+	\nocite{bartlett2008computer}
+	\nocite{wu2009learning}
+	\nocite{fasel2009infomax}
+	\nocite{wang2009hebbian}
+	\nocite{whitehill2009whose}
+	\nocite{wu2010facial}
+	\nocite{wu2011collecting}
+	\nocite{wu2011action}
+	\nocite{littlewort2011computer}
+	\nocite{littlewort2011motion}
+	\nocite{wu2012simultaneous}
 	\nocite{wu2012semi}
 	\nocite{wu2012multilayer}
-	\nocite{wu2011mocap}
-	\nocite{wu2011action}
-	\nocite{wu2010facial}
-	\nocite{wu2009learning}
-	\nocite{wu2004probability}
 	\nocite{ruvolo2012control}
 	\nocite{sikka2012exploring}
 	\nocite{long2012learning}
-	\nocite{littlewort2011computer}
-	\nocite{littlewort2011motion}
-	\nocite{whitehill2009whose}
-	\nocite{wang2009hebbian}
-	\nocite{bartlett2008computer}
-	\nocite{bartlett2006insights}
-	%\printbibliography
-
+	\nocite{wu2013stac}
+	\nocite{tassa2013modeling}
+	\nocite{johnson2015team}
+	\nocite{wiedebach2016walking}
+	\nocite{koolen2016design}
+	%\nocite{wu2013dna}
+%\printbibliography
 
 \section{Presentations}
-	\cventry{}{``Cross Database Action Unit Recognition Transfer''}{Facial Expression Recognition Analysis Challenge 2011}{Santa Barbara, CA}{(Second Place Winner Talk)}{}{}
-	\cventry{}{``A Practical Guide to Support Vector Machines''}{a general introduction talk to SVMs presented multiple times in NSF iSLC meeting 2008, UCSD TDLC bootcamp 2009, and  Telluride Neuromorphic  Workshop 2009}{}{}{}
-	\cventry{}{``Cafeteria Vision -- an automatic dish identification and amount measurement system''}{UCSD All Graduate Student Symposium}{}{}{}
-	\cventry{}{``Ranking by Stealing Human Cycles''}{Workshop in Machine Learning Summer School 2006}{Taipei, Taiwan}{}{}
-	\cventry{}{``The Colorful Liquid Crystal Filter''}{International Science and Engineering Fair 2000}{Detroit, IL}{(Fourth Award, ranked 7/157)}{}
+	\cventry{2011}{``Cross Database Action Unit Recognition Transfer''}{Facial Expression Recognition Analysis Challenge 2011}{Santa Barbara, CA}{(Second Place Winner Talk)}{}{}
+	\cventry{2009}{``A Practical Guide to Support Vector Machines''}{a general introduction talk to SVMs presented multiple times in NSF iSLC meeting 2008, UCSD TDLC bootcamp 2009, and  Telluride Neuromorphic  Workshop 2009}{}{}{}
+	\cventry{2006}{``Cafeteria Vision -- an automatic dish identification and amount measurement system''}{UCSD All Graduate Student Symposium}{}{}{} %cited by US patent 8229204 B2
+	\cventry{2006}{``Ranking by Stealing Human Cycles''}{Workshop in Machine Learning Summer School 2006}{Taipei, Taiwan}{}{}
+	\cventry{2000}{``The Colorful Liquid Crystal Filter''}{International Science and Engineering Fair 2000}{Detroit, IL}{(Fourth Award, ranked 7/157)}{}
 	
 \section{Academic Service}
 		\cventry{2011-2013}{Reviewer}{International Conference on Robotics and Automation}{}{}{}
@@ -166,7 +188,7 @@ Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robo
 		\cventry{2007}{Reviewer}{IEEE Transactions on Neural Networks}{}{}{}
  
 \section{Other Experiences}
-	\cventry{2004 - 2005}{Information System Officer}{}{R.O.C Air Force Academy} {Kaohsiung, Taiwan}
+	\cventry{2004 - 2006}{Information System Officer}{}{R.O.C Air Force Academy} {Kaohsiung, Taiwan}
 	{
  		\begin{itemize}\parskip=0pt\vspace*{-3pt}
  			\item Lead a team of 12 people delivering 24hr services to base-wide intranet and 1500+ PCs
@@ -175,10 +197,8 @@ Seeking a full-time robotic research / engineer position %in the IHMC DARPA Robo
 			sped up the throughput by an order of magnitude
  		\end{itemize}
 	}
-  \section{Additional Skills}
+\section{Additional Skills}
  	\cvitem{languages}{English (proficient) Mandarin Chinese (native), Taiwanese (native)}
-\end{document}
- 
 
 \end{document}
 
